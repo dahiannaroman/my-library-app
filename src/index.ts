@@ -1,10 +1,18 @@
-/* Este fragmento de código utiliza una expresión de función de invocación inmediata (IIFE) en
-TypeScript. */
-(()=> {
-    /* El código declara una variable constante `myName` de tipo `string` con el valor ``Nicolas''. Luego,
-    registra el valor de la variable `myName` en la consola. Todo el código está incluido en una
-    expresión de función invocada inmediatamente (IIFE) en TypeScript, lo que significa que la función
-    se ejecuta inmediatamente después de definirse. */
-        const myName: string = 'Nicolas';
-        console.log(myName);
-    })();
+// src/index.ts
+
+import * as readline from 'readline';
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Seleccione una opción: ', (opcion) => {
+    ejecutarOpcion(opcion);
+    rl.close();
+});
+
+function ejecutarOpcion(opcion: string) {
+    // Aquí puedes implementar la lógica para manejar la opción seleccionada por el usuario
+    console.log(`Ha seleccionado la opción ${opcion}`);
+}

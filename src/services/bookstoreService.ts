@@ -1,6 +1,7 @@
 import { Libro } from '../models/book';
 import { Transaccion } from '../models/transaction';
 
+
 export class bookstoreService {
     private caja: number = 1000000; //inversion inicial
 

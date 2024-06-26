@@ -1,8 +1,8 @@
 //Libro
 
-import { Book } from '../variables-types';
+import { Libro as LibroType } from '../variables-types';
 
-export class Libro implements Book {
+export class Libro {
     constructor(
         public titulo: string,
         public autor: string,
@@ -20,5 +20,13 @@ export class Libro implements Book {
         public dimensiones: { ancho: number; profundidad: number; altura: number },
         public peso: number,
         public disponible: boolean,
+        public nuevoLibro: string,
     ) {}
+}
+
+export interface Libro {
+    precioVenta: number;
+    cantidadActual: number; 
+    precioCompra: number;
+    nuevoLibro: string;
 }
