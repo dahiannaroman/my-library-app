@@ -1,24 +1,26 @@
 //Libro
 
-import { Book } from '../variables-types';
+import { Libro as LibroType } from '../variables-types';
 
-export class Libro implements Book {
-    constructor(
-        public titulo: string,
-        public autor: string,
-        public genero: string,
-        public idioma: string,
-        public precio: number,
-        public formato: string,
-        public isbn: string,
-        public descripcion: string,
-        public estado: string,
-        public ubicacion: string,
-        public fecha_publicacion: Date,
-        public editorial: string,
-        public paginas: number,
-        public dimensiones: { ancho: number; profundidad: number; altura: number },
-        public peso: number,
-        public disponible: boolean,
-    ) {}
+export interface Libro {
+    titulo: string;
+    autor: string;
+    genero: string;
+    idioma: string;
+    precio: number;
+    formato: string;
+    isbn: string;
+    descripcion: string;
+    estado: string;
+    ubicacion: string;
+    fecha_publicacion: Date;
+    editorial: string;
+    paginas: number;
+    dimensiones: { ancho: number; profundidad: number; altura: number };
+    peso: number;
+    disponible: boolean;
+    nuevoLibro: boolean; // Por ejemplo, una propiedad adicional que debe estar en la interfaz Libro
+    precioVenta: number;
+    cantidadActual: number;
+    precioCompra: number;
 }

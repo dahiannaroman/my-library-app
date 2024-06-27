@@ -3,7 +3,7 @@ export const libraryName: string = "My Library";
 export let numberOfBooks: number;
 export let isLibraryOpen: boolean;
 //Libro
-export type Book = {
+export type Libro = {
     titulo: string;
     autor: string;
     genero: string;
@@ -35,6 +35,6 @@ let ubicacion: string;
 let fecha_publicacion: Date;
 let editorial: string;
 let paginas: number;
-let dimensiones: [number, number, number]; 
+let dimensiones: { ancho: number; profundidad: number; altura: number };
 let peso: number;
 let disponible: boolean;
