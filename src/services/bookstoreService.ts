@@ -3,7 +3,7 @@ import { Transaccion } from '../models/transaction';
 
 
 export class bookstoreService {
-    private caja: number = 0;
+    private caja: number = 1000000;
     private catalogo: Map<string, Libro> = new Map();
     private transacciones: Map<string, Transaccion[]> = new Map();
 
